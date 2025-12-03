@@ -1,14 +1,15 @@
 package Ahorcado;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
+import javax.swing.text.StyleContext;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 import java.util.List;
-import java.util.Random;
 
-public class Ahorcado {
+public class Ahorcado extends JFrame {
     private JPanel panelPrincipal;
     private JLabel labelPalabra;
     private JTextField textFieldLetra;
@@ -17,13 +18,11 @@ public class Ahorcado {
     private JButton btnNuevoJuego;
     private JLabel labelDibujo;
 
-
     private String palabraSecreta;
     private char[] palabraActual;
     private int intentosRestantes;
     private List<Character> letrasUsadas;
     private String[] palabras = {"PROGRAMACION", "JAVA", "COMPUTADORA", "TECLADO", "MONITOR"};
-
 
     private String[] dibujos = {
             "  +---+\n  |   |\n      |\n      |\n      |\n      |\n=========",
@@ -36,6 +35,14 @@ public class Ahorcado {
     };
 
     public Ahorcado() {
+        // Configurar la ventana
+        setContentPane(panelPrincipal);
+        setTitle("Juego del Ahorcado");
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setSize(500, 600);
+        setLocationRelativeTo(null);
+
+        // Iniciar el juego
         iniciarJuego();
 
         btnAdivinar.addActionListener(new ActionListener() {
@@ -51,7 +58,6 @@ public class Ahorcado {
                 iniciarJuego();
             }
         });
-
 
         textFieldLetra.addActionListener(new ActionListener() {
             @Override
@@ -133,15 +139,5 @@ public class Ahorcado {
             textFieldLetra.setEnabled(false);
             btnAdivinar.setEnabled(false);
         }
-    }
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Juego del Ahorcado");
-        frame.setContentPane(new Ahorcado().panelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setSize(500, 600);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
     }
 }

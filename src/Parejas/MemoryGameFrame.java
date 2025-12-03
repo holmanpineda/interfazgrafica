@@ -30,7 +30,7 @@ public class MemoryGameFrame extends JFrame {
     }
 
     private void initGame() {
-        gridPanel.setLayout(new GridLayout(4,4,5,5));
+        gridPanel.setLayout(new GridLayout(4, 4, 5, 5));
         gridPanel.removeAll();
 
         symbols = new ArrayList<>();
@@ -91,4 +91,5 @@ public class MemoryGameFrame extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new MemoryGameFrame().setVisible(true));
     }
+
 }

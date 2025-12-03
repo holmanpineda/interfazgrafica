@@ -1,6 +1,7 @@
 package Calculadora;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class CalculatorFrame extends JFrame {
@@ -59,9 +60,15 @@ public class CalculatorFrame extends JFrame {
         double result = 0;
 
         switch (operator) {
-            case "+": result = firstNumber + secondNumber; break;
-            case "-": result = firstNumber - secondNumber; break;
-            case "*": result = firstNumber * secondNumber; break;
+            case "+":
+                result = firstNumber + secondNumber;
+                break;
+            case "-":
+                result = firstNumber - secondNumber;
+                break;
+            case "*":
+                result = firstNumber * secondNumber;
+                break;
             case "/":
                 if (secondNumber == 0) {
                     display.setText("Error");
@@ -84,4 +91,5 @@ public class CalculatorFrame extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new CalculatorFrame().setVisible(true));
     }
+
 }

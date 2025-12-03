@@ -4,9 +4,12 @@ import Triqui.UI.model.Game;
 import Triqui.UI.model.Player;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
+import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class TicTacToeFrame extends JFrame {
     private JPanel contentPane;
@@ -99,4 +102,5 @@ public class TicTacToeFrame extends JFrame {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new TicTacToeFrame().setVisible(true));
     }
+
 }
