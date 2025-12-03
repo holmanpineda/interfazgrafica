@@ -1,4 +1,4 @@
-package model;
+package Triqui.UI.model;
 
 public class Game {
     private final Board board = new Board();

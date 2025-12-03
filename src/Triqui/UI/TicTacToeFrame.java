@@ -1,7 +1,7 @@
-package UI;
+package Triqui.UI;
 
-import model.Game;
-import model.Player;
+import Triqui.UI.model.Game;
+import Triqui.UI.model.Player;
 
 import javax.swing.*;
 import java.awt.*;

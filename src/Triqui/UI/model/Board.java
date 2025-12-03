@@ -1,4 +1,4 @@
-package model;
+package Triqui.UI.model;
 
 import java.util.Arrays;
 

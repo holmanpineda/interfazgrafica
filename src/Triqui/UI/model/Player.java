@@ -1,4 +1,4 @@
-package model;
+package Triqui.UI.model;
 
 public enum Player {
     X("X"), O("O");
