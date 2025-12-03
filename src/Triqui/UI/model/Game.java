@@ -17,7 +17,7 @@ public class Game {
 
         winner = board.winner();
         if (winner != null) finished = true;
-        else if (board.isFull()) finished = true; // Empate
+        else if (board.isFull()) finished = true;
         else current = current.next();
 
         return true;

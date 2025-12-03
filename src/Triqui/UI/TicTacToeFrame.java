@@ -31,16 +31,16 @@ public class TicTacToeFrame extends JFrame {
         contentPane.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         setContentPane(contentPane);
 
-        // Top status
+
         statusLabel = new JLabel("", SwingConstants.CENTER);
         statusLabel.setFont(new Font("SansSerif", Font.PLAIN, 18));
         contentPane.add(statusLabel, BorderLayout.NORTH);
 
-        // Grid 3x3
+
         gridPanel = new JPanel(new GridLayout(3, 3, 6, 6));
         contentPane.add(gridPanel, BorderLayout.CENTER);
 
-        // Crear botones de celdas
+
         for (int r = 0; r < 3; r++) {
             for (int c = 0; c < 3; c++) {
                 CellButton btn = new CellButton(r, c);
@@ -50,7 +50,7 @@ public class TicTacToeFrame extends JFrame {
             }
         }
 
-        // Bottom reset
+
         resetButton = new JButton("Reiniciar");
         resetButton.addActionListener(e -> onReset());
         contentPane.add(resetButton, BorderLayout.SOUTH);

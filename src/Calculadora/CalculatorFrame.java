@@ -21,7 +21,7 @@ public class CalculatorFrame extends JFrame {
         setLocationRelativeTo(null);
         setContentPane(contentPane);
 
-        // Listeners numéricos
+
         btn0.addActionListener(e -> append("0"));
         btn1.addActionListener(e -> append("1"));
         btn2.addActionListener(e -> append("2"));
@@ -33,13 +33,13 @@ public class CalculatorFrame extends JFrame {
         btn8.addActionListener(e -> append("8"));
         btn9.addActionListener(e -> append("9"));
 
-        // Operaciones
+
         addButton.addActionListener(e -> setOperator("+"));
         subButton.addActionListener(e -> setOperator("-"));
         mulButton.addActionListener(e -> setOperator("*"));
         divButton.addActionListener(e -> setOperator("/"));
 
-        // Igual y limpiar
+
         equalsButton.addActionListener(this::calculate);
         clearButton.addActionListener(e -> display.setText(""));
     }

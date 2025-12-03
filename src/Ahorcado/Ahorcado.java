@@ -24,7 +24,7 @@ public class Ahorcado {
     private List<Character> letrasUsadas;
     private String[] palabras = {"PROGRAMACION", "JAVA", "COMPUTADORA", "TECLADO", "MONITOR"};
 
-    // Dibujos del ahorcado
+
     private String[] dibujos = {
             "  +---+\n  |   |\n      |\n      |\n      |\n      |\n=========",
             "  +---+\n  |   |\n  O   |\n      |\n      |\n      |\n=========",
